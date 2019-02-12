@@ -1,0 +1,43 @@
+﻿@using CarInsuranceProject.ViewModels
+@model List<CarInsuranceVMs>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Sign-ups</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var signup in Model)
+            {
+            <div class="row">
+                <div class="col">
+                    @signup.FirstName
+                </div>
+                <div class="col">
+                    @signup.LastName
+                </div>
+                <div class="col">
+                    @signup.EmailAddress
+                </div>
+                <div class="col">
+                    @signup.Year
+                </div>
+                <div class="col">
+                    @signup.Brand
+                </div>
+                <div class="col">
+                    @signup.Model
+                </div>
+                <div class="col">
+                    @signup.Plate
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-danger btn-block">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

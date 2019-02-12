@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_CarInsuranceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="InsuranceCustomer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="lastName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="dayOfBirth" Type="date" Nullable="false" />
+          <Property Name="emailAddress" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Model" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Plate" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="luxury" Type="bit" Nullable="false" />
+          <Property Name="Dui" Type="bit" Nullable="false" />
+          <Property Name="tickets" Type="int" Nullable="false" />
+          <Property Name="liable" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="db_CarInsuranceModelStoreContainer">
+          <EntitySet Name="InsuranceCustomer" EntityType="Self.InsuranceCustomer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_CarInsuranceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="InsuranceCustomer">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="dayOfBirth" />
+            <PropertyRef Name="emailAddress" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Brand" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="luxury" />
+            <PropertyRef Name="Dui" />
+            <PropertyRef Name="tickets" />
+            <PropertyRef Name="liable" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dayOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="emailAddress" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="luxury" Type="Boolean" Nullable="false" />
+          <Property Name="Dui" Type="Boolean" Nullable="false" />
+          <Property Name="tickets" Type="Int32" Nullable="false" />
+          <Property Name="liable" Type="Boolean" Nullable="false" />
+          <Property Name="Plate" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="db_CarInsuranceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="InsuranceCustomers" EntityType="Self.InsuranceCustomer" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_CarInsuranceModelStoreContainer" CdmEntityContainer="db_CarInsuranceEntities">
+          <EntitySetMapping Name="InsuranceCustomers">
+            <EntityTypeMapping TypeName="db_CarInsuranceModel.InsuranceCustomer">
+              <MappingFragment StoreEntitySet="InsuranceCustomer">
+                <ScalarProperty Name="Plate" ColumnName="Plate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="dayOfBirth" ColumnName="dayOfBirth" />
+                <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="luxury" ColumnName="luxury" />
+                <ScalarProperty Name="Dui" ColumnName="Dui" />
+                <ScalarProperty Name="tickets" ColumnName="tickets" />
+                <ScalarProperty Name="liable" ColumnName="liable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

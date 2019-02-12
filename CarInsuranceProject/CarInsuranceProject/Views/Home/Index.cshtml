@@ -1,0 +1,58 @@
+﻿<div class="row no-guters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Sign up for our newsletter</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var signup in Model)
+            { 
+                using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+                {
+                <div class="row">
+                    <div class="col">
+                        @signup.firstName
+                    </div>
+                    <div class="col">
+                        @signup.lastName
+                    </div>
+                    <div class="col">
+                        @signup.emailAddress
+                    </div>
+                    <div class="col">
+                        @signup.getYear
+                    </div>
+                    <div class="col">
+                        @signup.getBrand
+                    </div>
+                    <div class="col">
+                        @signup.getModel
+                    </div>
+                    <div class="form-group col-md-12">
+                        @signup.getPlate
+                    </div>
+                <div class="form-group col-md-12">
+                    <input name="bMonth" type="text" class="form-control" placeholder="Month of Birth" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="bDay" type="text" class="form-control" placeholder="Day of Birth" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="bYear" type="text" class="form-control" placeholder="Year of Birth" />
+                </div>
+
+                <h5>Do you have any speeding tickets? (Input 0 if none)      </h5>
+                <div class="form-group col-md-12">
+                    <input name="numtickets" type="text" class="form-control" placeholder="Number of tickets" />
+                </div>
+                <h5>Is your vehicle a luxury vehicle?  </h5>
+                <input class="ifLuxury" type="radio" name="IfLuxury" value="Yes">Yes<br>
+                <input class="ifLuxury" type="radio" name="IfLuxury" value="No" checked>No<br>
+                <h5>\nDo you want liability insurance?   </h5>
+                <input class="ifLuxury" type="radio" name="IfLuxury" value="Yes" checked>Yes<br>
+                <input class="ifLuxury" type="radio" name="IfLuxury" value="No">No<br>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
