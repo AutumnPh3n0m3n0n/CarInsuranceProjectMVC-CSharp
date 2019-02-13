@@ -33,17 +33,6 @@
         <EntityType Name="InsuranceCustomer">
           <Key>
             <PropertyRef Name="Id" />
-            <PropertyRef Name="firstName" />
-            <PropertyRef Name="lastName" />
-            <PropertyRef Name="dayOfBirth" />
-            <PropertyRef Name="emailAddress" />
-            <PropertyRef Name="Year" />
-            <PropertyRef Name="Brand" />
-            <PropertyRef Name="Model" />
-            <PropertyRef Name="luxury" />
-            <PropertyRef Name="Dui" />
-            <PropertyRef Name="tickets" />
-            <PropertyRef Name="liable" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />

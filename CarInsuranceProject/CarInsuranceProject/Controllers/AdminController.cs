@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CarInsuranceProject.ViewModels;
+using CarInsuranceProject.Models;
 
 namespace CarInsuranceProject.Controllers
 {
@@ -22,14 +23,9 @@ namespace CarInsuranceProject.Controllers
                     insurancevm.FirstName = signup.firstName;
                     insurancevm.LastName = signup.lastName;
                     insurancevm.EmailAddress = signup.emailAddress;
-                    insurancevm.DayofBirth = signup.dayOfBirth;
-                    insurancevm.Year = signup.Year;
-                    insurancevm.Brand = signup.Brand;
-                    insurancevm.Model = signup.Model;
-                    insurancevm.Plate = signup.Plate;
                     signupVMs.Add(insurancevm);
                 }
-                return View(signups);
+                return View(signupVMs);
             }
         }
 

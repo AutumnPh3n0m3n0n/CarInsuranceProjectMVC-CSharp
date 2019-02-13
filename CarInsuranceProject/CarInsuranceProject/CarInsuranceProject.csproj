@@ -128,17 +128,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CarInsuranceData.Context.cs">
+    <Compile Include="Models\CarInsuranceData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CarInsuranceData.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CarInsuranceData.cs">
+    <Compile Include="Models\CarInsuranceData.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CarInsuranceData.tt</DependentUpon>
     </Compile>
-    <Compile Include="CarInsuranceData.Designer.cs">
+    <Compile Include="Models\CarInsuranceData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CarInsuranceData.edmx</DependentUpon>
@@ -148,7 +148,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="InsuranceCustomer.cs">
+    <Compile Include="Models\InsuranceCustomer.cs">
       <DependentUpon>CarInsuranceData.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\getRateCarInsurance.cs" />
@@ -156,12 +156,12 @@
     <Compile Include="ViewModels\CarInsuranceVM.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CarInsuranceData.Context.tt">
+    <Content Include="Models\CarInsuranceData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CarInsuranceData.edmx</DependentUpon>
       <LastGenOutput>CarInsuranceData.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="CarInsuranceData.tt">
+    <Content Include="Models\CarInsuranceData.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CarInsuranceData.edmx</DependentUpon>
       <LastGenOutput>CarInsuranceData.cs</LastGenOutput>
@@ -197,11 +197,11 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <EntityDeploy Include="CarInsuranceData.edmx">
+    <EntityDeploy Include="Models\CarInsuranceData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CarInsuranceData.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="CarInsuranceData.edmx.diagram">
+    <Content Include="Models\CarInsuranceData.edmx.diagram">
       <DependentUpon>CarInsuranceData.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -236,8 +236,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -249,6 +247,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Success\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,58 +1,57 @@
 ﻿<div class="row no-guters m-3">
     <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
         <div class="card-header text-center">
-            <h5 class="m-0">Sign up for our newsletter</h5>
+            <h3 class="m-0">Sign up for car insurance</h3>
         </div>
         <div class="card-body">
-            @foreach (var signup in Model)
-            { 
-                using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+                @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
                 {
-                <div class="row">
-                    <div class="col">
-                        @signup.firstName
-                    </div>
-                    <div class="col">
-                        @signup.lastName
-                    </div>
-                    <div class="col">
-                        @signup.emailAddress
-                    </div>
-                    <div class="col">
-                        @signup.getYear
-                    </div>
-                    <div class="col">
-                        @signup.getBrand
-                    </div>
-                    <div class="col">
-                        @signup.getModel
-                    </div>
-                    <div class="form-group col-md-12">
-                        @signup.getPlate
-                    </div>
+            <div class="row">
                 <div class="form-group col-md-12">
-                    <input name="bMonth" type="text" class="form-control" placeholder="Month of Birth" />
+                    <input name="firstName" type="text" class="form-control" placeholder="First Name" required />
                 </div>
                 <div class="form-group col-md-12">
-                    <input name="bDay" type="text" class="form-control" placeholder="Day of Birth" />
+                    <input name="lastName" type="text" class="form-control" placeholder="Last Name" required />
                 </div>
                 <div class="form-group col-md-12">
-                    <input name="bYear" type="text" class="form-control" placeholder="Year of Birth" />
+                    <input name="emailAddress" type="email" class="form-control" placeholder="Email Address" required />
                 </div>
-
-                <h5>Do you have any speeding tickets? (Input 0 if none)      </h5>
                 <div class="form-group col-md-12">
-                    <input name="numtickets" type="text" class="form-control" placeholder="Number of tickets" />
+                    <input name="getYear" type="text" class="form-control" placeholder="Car Year (Please enter number)" required />
                 </div>
-                <h5>Is your vehicle a luxury vehicle?  </h5>
-                <input class="ifLuxury" type="radio" name="IfLuxury" value="Yes">Yes<br>
-                <input class="ifLuxury" type="radio" name="IfLuxury" value="No" checked>No<br>
-                <h5>\nDo you want liability insurance?   </h5>
-                <input class="ifLuxury" type="radio" name="IfLuxury" value="Yes" checked>Yes<br>
-                <input class="ifLuxury" type="radio" name="IfLuxury" value="No">No<br>
+                <div class="form-group col-md-12">
+                    <input name="getBrand" type="text" class="form-control" placeholder="Car Brand" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="getModel" type="text" class="form-control" placeholder="Car Model" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="getPlate" type="text" class="form-control" placeholder="License Plate" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="bMonth" type="text" class="form-control" placeholder="Birth Month (Please enter 1-Jan 2-Feb 3-Mar)" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="bDay" type="text" class="form-control" placeholder="Birth Day" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="bYear" type="text" class="form-control" placeholder="Birth Year" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Luxury" type="text" class="form-control" placeholder="Is this a luxury car?" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Dui" type="text" class="form-control" placeholder="Do you have a DUI? (Y-Yes, N-No)" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="numTickets" type="text" class="form-control" placeholder="How many tickets do you have? (0 for None)" required />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="coverage" type="text" class="form-control" placeholder="Do you want insurance coverage?(Y-Yes, N-No) " required />
+                </div>
                 <button type="submit" class="btn btn-block btn-primary">Submit</button>
             </div>
-            }
+                }
         </div>
     </div>
 </div>
