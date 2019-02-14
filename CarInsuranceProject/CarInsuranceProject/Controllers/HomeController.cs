@@ -69,7 +69,7 @@ namespace CarInsuranceProject.Controllers
                     }
 
                     //add $25 to the insurance if user age is less than 25
-                    if (age > 25)
+                    if (age < 25)
                     {
                     //have an if statement to prevent a duplicate message incase user is under 18
                         if (age >= 18)
